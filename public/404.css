@@ -1,0 +1,948 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.5s ease-in-out;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    font-size: 1.125rem;
+    width: 100%;
+    background: var(--gradient-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #2b2b2b;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #9c8fff;
+    border-radius: 20px;
+    border: 3px solid #2b2b2b;
+}
+
+::selection {
+    background: #c2b6b3;
+}
+
+::-moz-selection {
+    background: #c2b6b3;
+}
+
+:root {
+    --button-box-shadow: 0px 15px 0px 0px rgba(255, 255, 255, 0.26);
+    --box-shadow: 0px 3px 15px 0px rgba(109, 109, 109, 0.26);
+    --gradient-color: #151515;
+    --body-color: #000000;
+    --header-color: #12121289;
+    --header-button-color: #7c7b7b27;
+    --header-typing-color: #d4d3d3b5;
+    --header-color-on-mobile: #121212b7;
+    --text-color: #ffffff;
+    --card-text-color: #fff;
+}
+
+.dark {
+    --body-color: #1f55f8;
+    --gradient-color: #ffffff;
+    --box-shadow: 0px 3px 15px 0px rgba(130, 161, 253, 0.26);
+    --header-color: #ffffff82;
+    --header-typing-color: #5781ff90;
+    --header-button-color: #5781ff68;
+    --text-color: #2c5ff8;
+    --card-text-color: #000000;
+    --button-box-shadow: 0px 15px 0px 0px rgba(130, 161, 253, 0.694);
+}
+
+.header {
+    border-radius: 15px;
+    height: 70px;
+    z-index: 2;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    justify-content: space-between;
+    box-shadow: var(--box-shadow);
+    background-color: var(--header-color);
+    backdrop-filter: blur(50px);
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logotype{
+    position: absolute;
+    left:40px;
+}
+.logotype img {
+    max-width: 170px;
+    width: 40%;
+    
+}
+
+.logotype img:hover {
+    transform: scale(1.1);
+}
+
+.menu {
+    display: flex;
+    margin-right: 5%;
+    position: absolute;
+    left:37%;
+}
+
+.menu a {
+    margin-right: 15px;
+    display: block;
+    padding: 7px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.2s all ease-in-out;
+    color: var(--text-color);
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.menu a:hover {
+    background-color: var(--header-button-color);
+}
+
+.menu a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2.5px;
+    left: 50%;
+    position: absolute;
+    background: var(--text-color);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.menu a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.menu-icon {
+    display: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+    transform: scale(1, 1);
+}
+
+.fas {
+    font-weight: 500;
+    font-size: 2em;
+    color: var(--text-color);
+    transform: rotate(-25deg);
+    position: absolute;
+    right: 150px;
+}
+
+.fas:hover {
+    transform: scale(1.1);
+}
+
+.profile {
+    text-align: center;
+    margin: auto;
+    padding-top: 100px;
+    color: var(--text-color);
+    
+}
+
+.profile img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+    
+}
+
+#logout-button {
+    border: none;
+    margin-top:25px;
+    background-color: #2f63ff;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#logout-button:hover, #delete-account-button:hover{
+    scale: 1.06;
+    box-shadow: 0px 4px 15px 0px #ff3939;
+}
+
+#date{
+    margin-bottom: 50px;
+}
+
+.profile img:hover{
+    border:5px solid #1f55f8;
+    scale:1.2;
+    border-radius: 35%;
+}
+
+
+.profile p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+h1 {
+    margin-top: 2%;
+    font-size: 3rem;
+    font-weight: 600;
+    
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--header-color);
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    box-shadow: var(--box-shadow);
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+.footer-text {
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .header {
+        height: 170px;
+    }
+
+    nav {
+        height: 170px;
+
+
+    }
+
+    .typed-container {
+        display: none;
+
+    }
+
+    .menu {
+        padding-top: 2em;
+        flex-direction: column;
+        backdrop-filter: blur(100px);
+        width: 100%;
+        background-color: var(--header-color);
+        
+        position: absolute;
+        top: 170px;
+        left: 0;
+        padding-left: 150px;
+        padding-right: 150px;
+
+        z-index: 1;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 0.3s ease-in-out;
+        text-decoration: underline var(--text-color);
+
+
+    }
+
+
+
+    .menu a {
+        border-radius: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 36px;
+        font-weight: 700;
+        font-size: 47px;
+        background-color: var(--header-button-color);
+        width: 100%;
+        box-shadow:var(--button-box-shadow);
+    }
+
+    .menu a:hover{
+        box-shadow:none;
+    }
+
+    .menu li {
+        margin-bottom: 10px;
+
+
+    }
+
+    .logotype img {
+        width: 70%;
+    }
+
+    .fas {
+        font-size: 70px;
+        right: 210px;
+    }
+
+    .menu-icon {
+        position: absolute;
+        left: 48%;
+        display: block;
+        
+        color: var(--text-color);
+        font-size: 68px;
+        cursor: pointer;
+    }
+
+    h1{
+        margin-top: 35%;
+        font-size: 5rem;
+    }
+
+    .profile img{
+        width: 350px;
+    }
+
+    #users-info p{
+        font-size: 3rem; 
+    }
+
+     #date{
+        margin-bottom: 125px;
+    }
+
+    #logout-button{
+        font-size: 4rem; 
+        padding-left: 55px;
+        padding-right: 55px;
+    }
+
+
+
+
+
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+}
+
+.social-link .connected {
+    display: inline;
+    color: green;
+}
+
+.social-link .fa-check {
+    display: inline;
+    color: green;
+}
+
+.random-button {
+    position: absolute;
+    right: 2%;
+    padding: 15px;
+    background-color: #275EFE;
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.random-button:hover {
+    scale: 1.05;
+    box-shadow: 0px 4px 15px 0px #698efe;
+}
+
+
+
+.fab {
+    font-size: 1.6rem;
+}
+
+#user-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#user-info img {
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid var(--header-color);
+    margin-left: 10px;
+    width: 60px;
+    margin-bottom: 5px;
+
+}
+
+#logo-info{
+    position: absolute;
+    right:50px;
+}
+#logo-info img{
+    border-radius: 15px;
+    cursor: pointer;
+    border: 2px solid var(--header-color);
+    margin-left: 10px;
+    width: 60px;
+    margin-bottom: 5px;
+    
+}
+
+#logo-info img:hover {
+    scale: 1.05;
+    border: 3px solid #184fee;
+    box-shadow: 0px 4px 15px 0px #698efe;
+}
+
+.modal, .modal-2, .modal-3 {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    backdrop-filter: blur(2px);
+    animation: fadeIn 0.5s forwards;
+}
+
+.modal.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.modal-2.fade-out{
+    animation: fadeOut 0.5s forwards;
+}
+.modal-3.fade-out{
+    animation: fadeOut 0.5s forwards;
+}
+
+.modal-content.slide-up {
+    animation: slideUp 0.5s forwards;
+}
+
+.modal-content-2.slide-up{
+    animation: slideUp 0.5s forwards;
+}
+
+.modal-content-3.slide-up{
+    animation: slideUp 0.5s forwards;
+}
+
+
+.modal-content , .modal-content-2, .modal-content-3{
+    background-color: var(--header-color);
+    backdrop-filter: blur(2rem);
+    margin: 15% auto;
+    padding: 30px;
+    border: solid 2px var(--gradient-color);
+    color:var(--text-color);
+    font-weight: 500;
+    width: 80%;
+    border-radius: 15px;
+    max-width: 400px;
+    max-height: 400px;
+    
+    text-align: center;
+    animation: slideDown 0.5s forwards;
+    margin-bottom: 150px;
+
+
+}
+
+.modal-content p, .modal-content-2 p, .modal-content-3 p {
+    margin-bottom: 15%;
+    margin-top:3%;
+}
+
+.modal-content-2 h2{
+    margin-top: 15%;
+}
+
+
+
+.modal-content #login-button {
+    background-color: #184fee;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    left: 145px;
+    padding: 15px;
+    border: none;
+}
+
+#logout-button, #delete-account-button {
+    border: none;
+    font-size:1rem;
+    margin-top: 25px;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width:15%;
+    margin: auto;
+    margin-bottom: 25px;
+    
+}
+
+#delete-account-button{
+    text-align: center;
+    align-items: center;
+}
+
+
+#button {
+    border: none;
+
+
+    background-color: #184fee;
+    color: #fff;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#user-details p {
+    margin-bottom: 25px;
+}
+
+#account-created {
+    margin-bottom: 45px;
+}
+
+
+.modal-content a:hover,
+
+#logout-button:hover,
+#button:hover {
+    scale: 1.06;
+    box-shadow: 0px 4px 15px 0px #698efe;
+}
+
+
+
+.close, .close-2, .close-3{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+    color: #aaa;
+    float: right;
+
+
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.social-button:hover {
+    background-color: #0056b3;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 5px;
+    font-size: 24px;
+    
+}
+
+/* profile.css */
+.social-buttons {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.social-button:hover {
+    background-color: #0056b3;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 5px;
+    font-size: 24px;
+}
+
+
+.close:hover,
+.close:focus,
+.close-2:hover,
+.close-2:focus,
+.close-3:hover,
+.close-3:focus {
+    color: #275EFE;
+    scale: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#social-links{
+    font-size:2rem;
+    margin-right: 15px;
+    
+}
+#social-links .fab{
+    font-size:2.5rem;
+}
+#social-links .fa-telegram{
+    text-decoration: none;
+    color:#fff;
+    background-color: #08c;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#social-links .fa-telegram:hover{
+    box-shadow: 2px 2px 14px -2px #08c;
+    transform: scale(1.2);
+}
+
+#social-links .fa-instagram{
+    text-decoration: none;
+    color:#fff;
+    background: linear-gradient(to bottom right, #c13584, #d62976, #962fbf);
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 10px;
+}
+
+#social-links .fa-instagram:hover{
+    box-shadow: 8px 8px 14px -8px #c13584;
+    transform: scale(1.2);
+}
+
+
+
+#social-links .fa-youtube{
+    text-decoration: none;
+    color:#ff0000;
+    background: #fff;
+   
+    padding: 5px;
+    
+    border-radius: 10px;
+}
+
+#social-links .fa-youtube:hover{
+    box-shadow: 8px 8px 14px -8px #ffffff;
+    transform: scale(1.2)
+}
+
+#social-links .fa-twitch{
+    text-decoration: none;
+    color:#9446fd;
+    background: #fff;
+   
+    padding: 5px;
+    
+    border-radius: 10px;
+}
+
+#social-links .fa-twitch:hover{
+    box-shadow: 8px 8px 14px -8px #ffffff;
+    transform: scale(1.2)
+}
+
+#social-link{
+    font-size:1rem;
+    margin-bottom: 15% ;
+    margin-top: 5%;
+    width:90%;
+    height: 30px;
+    outline: none;
+    background-color:var(--header-button-color);
+    border: none;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    color:var(--text-color)
+
+}
+
+.modal-content-2 button, .modal-content-3 button{
+font-size:1rem;
+padding: 15px;
+background-color:#007bff;
+color:#fff;
+font-weight: 600;
+border: none;
+border-radius: 15px;
+}
+@keyframes fadeIn {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        margin-top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 15%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        margin-top: 15%;
+        opacity: 1;
+    }
+
+    to {
+        margin-top: -300px;
+        opacity: 0;
+    }
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+
+    
+
+    .random-button,
+    .fab {
+        font-size: 4rem;
+    }
+
+    .modal-content {
+        position: absolute;
+        left: 10%;
+        bottom: 40%;
+        border-radius: 25px;
+        font-size: 3rem;
+        max-width: 95%;
+        max-height: 75%;
+    }
+
+    .modal-content-2{
+        position: absolute;
+        left: 10%;
+        bottom: 20%;
+        border-radius: 25px;
+        font-size: 3rem;
+        max-width: 95%;
+        max-height: 75%;
+    }
+
+    .modal-content-3{
+        position: absolute;
+        left: 10%;
+        bottom: 40%;
+        border-radius: 25px;
+        font-size: 3rem;
+        max-width: 95%;
+        max-height: 75%;
+    }
+
+    .modal-content #login-button {
+        left: 33%;
+        margin-bottom: 25px;
+
+    }
+
+    .close, .close-2, .close-3 {
+        font-size: 4rem;
+    }
+
+    
+
+    #user-info img, #logo-info img {
+        width: 110px;
+    }
+
+    #logout-button, #delete-account-button {
+        font-size: 3.5rem;
+        width:80%;
+        margin-bottom: 7%;
+      
+    }
+
+    #logout{
+        margin-bottom: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #account-created {
+        margin-bottom: 150px;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        width:80%;
+        margin:auto;
+        
+    }
+
+    .social-button{
+        font-size: 3rem;
+        margin-bottom: 7%;
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    #social-links{
+        margin-bottom: 10%;
+        font-size:10rem;
+        
+    }
+
+    #social-links .fab{
+        font-size:7rem;
+    }
+
+   #social-links .fa-telegram, #social-links .fa-twitch, #social-links .fa-youtube{
+    padding: 15px;
+    border-radius: 25px;
+   }
+
+   #social-links .fa-instagram{
+    padding: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 25px;
+   }
+
+   .modal-content-2{
+        display: flex;
+        flex-direction: column;
+        
+
+   }
+
+   
+
+   #social-link{
+        font-size:3rem;
+        margin-bottom: 15% ;
+        margin-top: 5%;
+        width:90%;
+        height: 80px;
+        outline: none;
+        background-color:var(--header-button-color);
+        border: none;
+        border-radius: 15px;
+        box-shadow: var(--box-shadow);
+        color:var(--text-color)
+
+   }
+
+   .modal-content-2 button, .modal-content-3 button{
+    font-size:5rem;
+    padding: 15px;
+    background-color:#007bff;
+    color:#fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+   }
+}
+
+/* profile.css */
+
+
+
+.modal-3.fade-in {
+    display: block;
+    opacity: 1;
+}
+.modal-3.fade-out {
+    opacity: 0;
+}
+

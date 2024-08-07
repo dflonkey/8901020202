@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UshankaCraft — Игровой сервер Minecraft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <script src="js/jquery-latest.js" type="text/javascript"></script>
+    <script src="js/jquery-latest.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/aos.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav>
+            <div class="logotype">
+                <img src="images/logo.png">
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <a href="index.html">Главная</a></li>
+                <li><a href="about.html">О сервере</a></li>
+                <li><a href="rules.html">Правила</a></li>
+                <li><a href="donate.html">Донат</a></li>
+            
+
+
+
+            </ul>
+            <i class="fas fa-moon"></i>
+            <button id="login-button" class="random-button">
+                <i class="fab fa-discord"></i>
+            </button>
+
+
+            <div id="user-info">
+
+            </div>
+        </nav>
+
+    </header>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Войдите, используя Ваш Discord, для получения к полному функционалу сайта</p>
+            <a href="/login" class="button" id="login-button"><i class="fa-brands fa-discord"></i> Войти</a>
+        </div>
+    </div>
+
+    <!-- User Info Modal -->
+    <div id="user-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="user-details"></div>
+            
+            <button id="logout-button" class="button">Выйти</button>
+            
+        </div>
+    </div>
+
+    <section class="wrapper">
+        <div class="container">
+            <h1 class="h1text1">UshankaCraft</h1>
+            <div class="typed-container"><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+            </div>
+        </div>
+        <p class="text-about">
+        </p>
+        <div class="copybtn">
+            <button id="myInput" class="copy">Скопировать IP</button>
+            <button class="copied">Скопировано <i class="fa fa-check"></i></button>
+        </div>
+        <p class="text-version">Версия Minecraft 1.21</p>
+        <p class="text-download"><a href="https://prismlauncher.org/" target="_blank">Скачать Minecraft</a></p>
+    </section>
+    <div class="gradient">
+
+    </div>
+
+    <section class="info-container reveal">
+        <section class="info-container reveal fade-left">
+            <div class="text-container">
+                <div class="text-box">
+                    <img class="heart" src="images/heart.png" alt="">
+                    <h1 class="appear-text">Дружелюбное коммьюнити</h1>
+
+                </div>
+
+        </section>
+        <section class="info-container reveal fade-right">
+            <div class="text-container">
+                <div class="text-box">
+                    <img class="firework" src="images/firework.png" alt="">
+                    <h1 class="appear-text">Постоянные ивенты</h1>
+
+                </div>
+
+        </section>
+    </section>
+    <section class="info-container reveal">
+        <section class="info-container reveal fade-bottom">
+            <div class="text-container">
+                <div class="text-box">
+                    <img class="clock" src="images/clock.png" alt="">
+                    <h1 class="appear-text">Регулярные обновления</h1>
+
+                </div>
+
+        </section>
+
+
+    </section>
+
+
+
+    </section>
+    </section>
+
+
+
+
+    </div>
+    <div class="ip-card">
+        <h1 class="card-title">Добро пожаловать!</h1>
+        <p class="card-text">Залетай скорее на UshankaCraft, чтобы стать частью самого лучшего коммьюнити в мире!</p>
+        <button class="copy-button">Скопировать IP</button>
+        <button class="copied-button">Скопировано! <i class="fa fa-check"></i></button>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-main-1">
+            <div class="footer-main-2">
+                <div class="footer-logo">
+                    <a href="#"><img src="images/logo.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-text">UshankaCraft 2024 © </p>
+        <p class="footer-text">Все права защищены. Любое копирование запрещено.</p><br>
+
+    </div>
+
+    </section>
+
+    <span style="position: absolute; z-index: -1;"><input class="text" type="text" value="mc.ushnka.online"></span>
+    <script src="script.js"></script>
+    <script>
+        var button = document.querySelector('.copy');
+        button.addEventListener('click', function (event) {
+            var text = document.querySelector('.text');
+            text.select();
+            document.execCommand('copy');
+        });
+
+        var button2 = document.querySelector('.copy-button');
+        button2.addEventListener('click', function (event) {
+            var text2 = document.querySelector('.text');
+            text2.select();
+            document.execCommand('copy');
+        });
+
+        function OpenProfile(){
+           
+        }
+
+
+    </script>
+    <script src="https://kit.fontawesome.com/cc4d02473d.js" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

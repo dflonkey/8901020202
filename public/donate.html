@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>UshankaCraft | Донат</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <script src="js/jquery-latest.js" type="text/javascript"></script>
+    <script src="js/jquery-latest.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/aos.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav>
+            <div class="logotype">
+                <img src="images/logo.png">
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <a href="index.html">Главная</a></li>
+                <li><a href="about.html">О сервере</a></li>
+                <li><a href="rules.html">Правила</a></li>
+                <li><a href="https://minecraft.ushnka.online">Донат</a></li>
+            
+
+
+
+            </ul>
+            <i class="fas fa-moon"></i>
+            <button id="login-button" class="random-button">
+                <i class="fab fa-discord"></i>
+            </button>
+
+
+            <div id="user-info">
+
+            </div>
+        </nav>
+
+    </header>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Войдите, используя Ваш Discord, для получения к полному функционалу сайта</p>
+            <a href="/login" class="button" id="login-button"><i class="fa-brands fa-discord"></i> Войти</a>
+        </div>
+    </div>
+
+    <!-- User Info Modal -->
+    <div id="user-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="user-details"></div>
+            
+            <button id="logout-button" class="button">Выйти</button>
+            
+        </div>
+    </div>
+
+    <section class="wrapper">
+        <div class="container">
+            <h1 class="h1text1">О сервере</h1>
+            
+        </div>
+        <p class="text-about">
+        </p>
+        
+        <p class="text-version">Версия Minecraft 1.21</p>
+        <p class="text-download"><a href="https://prismlauncher.org/" target="_blank">Скачать Minecraft</a></p>
+    </section>
+    <div class="gradient">
+
+    </div>
+
+    <section class="info-container reveal">
+        <section class="info-container reveal fade-left">
+            <div class="text-container">
+                <div class="text-box">
+                    
+                    <div class="left-column">
+                        <section class="product-section">
+                          <div class="product-grid">
+                            <div class="card">
+                              <div class="card-pill">
+                                Скидка!
+                              </div>
+                              <img class="card-img" src="images/logo.png" alt="product-image">
+                              <div class="flex-row space-between w-full mb-sm">
+                               
+                                <p class="product-cat hide">Категория</p>
+                              </div>
+                              <h1 class="product-name">Проходка на сервер</h1>
+                              <div class="flex-row">
+                                <p class="price strike">249 <span>RUB</span></p>
+                                <p class="price">149 <span>RUB</span></p>
+                              </div>
+                              <div class="btn-col">
+                                <button value="149" id="btn" class="icon-link">
+                                  Купить
+                                  <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto"
+                                    height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+                                    <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+                                  </svg>
+                                </button>
+                              </div>
+                            </section>
+                            <section class="product-section">
+                                <div class="product-grid">
+                                  <div class="card">
+                                    <div class="card-pill">
+                                      Скидка!
+                                    </div>
+                                    <img class="card-img" src="images/logo.png" alt="product-image">
+                                    <div class="flex-row space-between w-full mb-sm">
+                                     
+                                      <p class="product-cat hide">Категория</p>
+                                    </div>
+                                    <h1 class="product-name">Проходка на сервер</h1>
+                                    <div class="flex-row">
+                                      <p class="price strike">449 <span>RUB</span></p>
+                                      <p class="price">349 <span>RUB</span></p>
+                                    </div>
+                                    <div class="btn-col">
+                                      <button value="579" id="btn" class="icon-link">
+                                        Купить
+                                        <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto"
+                                          height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                          <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+                                          <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </section>
+                                  <section class="product-section">
+                                    <div class="product-grid">
+                                      <div class="card">
+                                        <div class="card-pill">
+                                          Скидка!
+                                        </div>
+                                        <img class="card-img" src="images/logo.png" alt="product-image">
+                                        <div class="flex-row space-between w-full mb-sm">
+                                         
+                                          <p class="product-cat hide">Категория</p>
+                                        </div>
+                                        <h1 class="product-name">Проходка на сервер</h1>
+                                        <div class="flex-row">
+                                          <p class="price strike">449 <span>RUB</span></p>
+                                          <p class="price">349 <span>RUB</span></p>
+                                        </div>
+                                        <div class="btn-col">
+                                          <button value="579" id="btn" class="icon-link">
+                                            Купить
+                                            <svg fill="none" class="rubicons arrow-right-up" xmlns="http://www.w3.org/2000/svg" width="auto"
+                                              height="auto" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                              <path d="M17.9645 12.9645l.071-7h-7.071" stroke-linecap="round"></path>
+                                              <path d="M5.9645 17.9645l12-12" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </section>
+                                      
+                                  
+                            </div>
+                            
+                       
+                            
+                </div>
+
+        
+        
+    
+    </section>
+    
+
+    </section>
+    
+
+
+
+    </div>
+    <div class="ip-card">
+        <h1 class="card-title">Добро пожаловать!</h1>
+        <p class="card-text">Залетай скорее на UshankaCraft, чтобы стать частью самого лучшего коммьюнити в мире!</p>
+        <button class="copy-button">Скопировать IP</button>
+        <button class="copied-button">Скопировано! <i class="fa fa-check"></i></button>
+    </div>
+    <div id="paymentModal" class="payment-modal">
+        <div class="payment-modal-content">
+          
+          <h3 class="sum">К оплате:&nbsp;<div id="value"> </div>&nbsp;RUB</h3>
+  
+          <p>Для покупки свяжитесь с <b>fnvsk </b>в Telegram</p>
+          <a href="https://t.me/itsbabyx" class="button fa-brands fa-telegram" id="login-button"><i ></i> Telegram</a>
+  
+  
+          </div>
+        </div>
+      </div>
+
+    <div class="footer">
+        <div class="footer-main-1">
+            <div class="footer-main-2">
+                <div class="footer-logo">
+                    <a href="#"><img src="images/logo.png" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-text">UshankaCraft 2024 © </p>
+        <p class="footer-text">Все права защищены. Любое копирование запрещено.</p><br>
+
+    </div>
+
+    </section>
+
+    <span style="position: absolute; z-index: -1;"><input class="text" type="text" value="mc.ushnka.online"></span>
+    
+    <script>
+        
+
+        var button2 = document.querySelector('.copy-button');
+        button2.addEventListener('click', function (event) {
+            var text2 = document.querySelector('.text');
+            text2.select();
+            document.execCommand('copy');
+        });
+
+        function OpenProfile(){
+           
+        }
+
+        const copy2 = document.querySelector('.copy-button');
+const copied2 = document.querySelector('.copied-button')
+
+copy2.addEventListener('click', () => {
+ 
+  copy2.style.display = "none";
+  copied2.style.display = "block";
+
+
+
+});
+
+
+
+
+
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 350;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal, { passive: true });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const loginButton = document.getElementById('login-button');
+  const modal = document.getElementById('modal');
+  const userModal = document.getElementById('user-modal');
+  const userInfo = document.getElementById('user-info');
+  const logoutButton = document.getElementById('logout-button');
+  const span = document.getElementsByClassName('close');
+
+  // Fetch user data from the server
+  fetch('/api/user')
+    .then(response => response.json())
+    .then(user => {
+      const avatarUrl = `https://cdn.discordapp.com/avatars/${user.discordId}/${user.avatar}.png`;
+      userInfo.innerHTML = `<img src="${avatarUrl}" alt="User Avatar" id="user-avatar">`;
+
+      document.getElementById('user-avatar').onclick = () => {
+        const creationDate = new Date(user.createdAt).toLocaleDateString();
+        document.getElementById('user-details').innerHTML = `
+                  <p><span style="font-weight:800">Ник:</span> ${user.username}</p>
+                 
+                  <p><span style="font-weight:800">Discord ID:</span> ${user.discordId}</p>
+                  <p id="account-created"><span style="font-weight:800">Аккаунт создан:</span> ${creationDate}</p>
+                  <a id="button" class="button" href="./profiles/${user.username}.html">Профиль</a>
+              `;
+        userModal.style.display = "block";
+      };
+
+      // Hide login button if user is logged in
+      loginButton.style.display = "none";
+    })
+    .catch(() => {
+      // If user is not logged in, show login button
+      loginButton.style.display = "inline-block";
+    });
+
+  // Show login modal
+  loginButton.onclick = () => {
+    modal.classList.remove('fade-out');
+    modal.style.display = "block";
+  }
+
+  // Close modals with animation
+  Array.from(span).forEach(element => {
+    element.onclick = () => {
+      closeModal(modal);
+      closeModal(userModal);
+    }
+  });
+
+  window.onclick = (event) => {
+    if (event.target == modal) {
+      closeModal(modal);
+    } else if (event.target == userModal) {
+      closeModal(userModal);
+    }
+  };
+
+  // Log out button
+  logoutButton.onclick = () => {
+    window.location.href = '/logout';
+  }
+
+  // Function to close modal with animation
+  function closeModal(modalElement) {
+    modalElement.classList.add('fade-out');
+    const modalContent = modalElement.querySelector('.modal-content');
+    modalContent.classList.add('slide-up');
+    modalContent.addEventListener('animationend', () => {
+      modalElement.style.display = 'none';
+      modalElement.classList.remove('fade-out');
+      modalContent.classList.remove('slide-up');
+    }, { once: true });
+  }
+});
+
+const darkBtn = document.querySelector('.fas');
+const bodyEl = document.querySelector('body');
+
+const darkMode = () => {
+  bodyEl.classList.toggle('dark')
+}
+
+darkBtn.addEventListener('click', () => {
+
+  setDarkMode = localStorage.getItem('dark');
+
+  if (setDarkMode !== "on") {
+    darkMode();
+    
+
+    setDarkMode = localStorage.setItem('dark', 'on');
+  } else {
+    darkMode();
+    
+
+
+    setDarkMode = localStorage.setItem('dark', null);
+
+  }
+  darkBtn.classList.add('fa-moon')
+});
+
+
+let setDarkMode = localStorage.getItem('dark');
+
+
+if (setDarkMode === 'on') {
+  darkMode();
+
+
+  
+}
+    </script>
+    <script src="https://kit.fontawesome.com/cc4d02473d.js" crossorigin="anonymous"></script>
+    <script src="/payment.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+</body>
+
+</html>
